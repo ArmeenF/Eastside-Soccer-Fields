@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eastside Soccer Field Locator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+      <ul id="nav-menu" class="hidden">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <header>
+      <h1>Eastside Soccer Field Locator</h1>
+      <p>Check schedules and reservation of local fields</p>
+      <p class="highlight">More cities/fields to come soon*</p>
+      <div class="select-wrapper">
+        <label for="city-select">Select a city:</label>
+        <select id="city-select" onchange="jumpToCity()">
+          <option value="">--Select a city--</option>
+          <option value="kirkland">Kirkland</option>
+          <option value="redmond">Redmond</option>
+        </select>
+      </div>
+    </header>
+    <main>
+      <div id="kirkland" class="city-section">
+        <h2>Kirkland</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Field Name</th>
+              <th>Address</th>
+              <th>Reservation Schedule</th>
+            </tr>
+          </thead>
+          <tbody id="kirkland-content"></tbody>
+        </table>
+      </div>
+      <div id="redmond" class="city-section">
+        <h2>Redmond</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Field Name</th>
+              <th>Address</th>
+              <th>Reservation Schedule</th>
+            </tr>
+          </thead>
+          <tbody id="redmond-content"></tbody>
+        </table>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
